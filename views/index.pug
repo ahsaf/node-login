@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+    h1  #{title}
+    h2 #{v}
+    ul.list-group
+      each a, i in art
+        li.list-group-item
+          a(href="/articles/"+a._id)= a.title
+    br
+    a.btn.btn-success(href='articles/add') Add Article
